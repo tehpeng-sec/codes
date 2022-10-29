@@ -1,0 +1,15 @@
+---
+  - name: Get Network Info
+    hosts: win
+    tasks:
+
+    - name: Run Netstat
+      ansible.windows.win_command: netstat.exe
+      register: netstat_out
+
+    - name: Copy File 
+      ansible.windows.win_copy:
+        src: /project/hash.txt
+        dest: C:\hashscan\hash.txt
+
+    - debug: var=netstat_out.stdout_lines

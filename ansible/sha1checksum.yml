@@ -1,0 +1,16 @@
+---
+  - name: Get SHA1 Checksum
+    hosts: localhost
+    tasks:
+
+    - name: Get SHA1 Checksum of file
+      stat:
+        path: /home/admin/Downloads/elasticsearch.rpm
+        checksum_algorithm: sha1
+        get_checksum: yes
+      register: sha
+
+    - name: Debug
+      debug:
+        msg: |
+          "Hash is: {{ sha }}"

@@ -1,0 +1,42 @@
+---
+  - name: Get KB
+    hosts: win
+    
+    tasks:
+
+    - name: Get Properties of hash.txt
+      stat: {{ inventory_hostname }}
+        path: /opt/hash/hash.txt
+        checksum_algorithm: md5
+      delegate_to: localhost
+      register: source_info
+
+    - debug: var=source_info.stdout_lines
+
+    - name: Copy hast.txt to slave
+      ansible.windows.win_copy:
+        src: /project/hash.txt
+        dest: C:\SecurityHashScan\hash.txt
+        remote_src: no 
+        force: yes
+      register: copy_out
+
+    - debug: var=copy_out.stdout_lines
+
+    - name: Fail of copy was a failure
+      fail:
+        msg: "Copy Failed"
+      when: source_info.stat.checksum != copy_out.checksum
+
+    - name: Print Copy Successul
+      debug:
+        msg: "Copy Successul"
+
+    - name: Run Batch File
+      ansible.builtin.win_shell: .\simplebat.bat
+      args:
+        executable: cmd 
+        chdir: C:\SecurityHashScan
+      register: batch_out
+
+    - debug: var=batch_out.stdout_lines

@@ -1,0 +1,10 @@
+---
+  - name: Copy files
+    hosts: localhost
+    tasks:
+
+    - name: Run hostname
+      ansible.windows.win_command: whoami.exe
+      register: hostname_out
+
+    - debug: var=hostname_out.stdout_lines

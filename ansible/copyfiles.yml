@@ -1,0 +1,32 @@
+---
+
+  - name: copy files to destination
+    hosts: localhost
+    connection: local
+    tasks:
+      - block:
+        - name: get properties of src.txt
+          stat:
+            path: /opt/hash/hash.txt
+            checksum_algorithm: sha1
+          register: src_info
+
+        - name: Copy Hash File to Project
+          copy:
+            src: /opt/hash/hash.txt
+            dest: /project/hash.txt
+            force: yes
+            checksum:
+          register: copy_out
+
+        - name: Fail if copy was a failure
+          fail:
+            msg: "Copy failed!"
+          when: src_info.stat.checksum != copy_out.checksum
+
+        - name: Print Copy successful
+          debug:
+            msg: "Copy Successful!"
+        
+        tags:
+        - checksum

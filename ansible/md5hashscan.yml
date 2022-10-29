@@ -1,0 +1,12 @@
+---
+  - name: Get Hash Values
+    hosts: localhost
+    tasks:
+
+    - name: Check MD5 value with Shell command
+      shell:
+         "md5sum /home/adminsys/*"
+      register: md5shell
+      tags: md5shell
+
+    - debug: msg="{{md5shell.stdout}}"

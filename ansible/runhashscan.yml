@@ -1,0 +1,28 @@
+---
+
+  - name: Get Hashes
+    hosts: localhost
+    tasks:
+
+    - name: Copy Hash File To /opt/hash
+      become: yes
+      copy:
+        src: /home/adminsys/hash.txt
+        dest: /opt/hash/
+        owner: root
+        group: root
+        mode: 0644
+      ansible.builtin.debug:
+        msg: "File Copied Successfully"
+
+    - name: Run Hashing Script
+      become: yes
+      become_user: root
+      shell:
+         "cat hash.txt"
+      args:
+        chdir: "/opt/hash" 
+      register: hashscan
+      tags: hashscan
+      ansible.builtin.debug:
+        msg: 

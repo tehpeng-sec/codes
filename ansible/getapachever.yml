@@ -1,0 +1,27 @@
+---
+
+  - name: Get Apache Version
+    hosts: localhost
+    tasks:
+
+    - name: Check OS Version
+      shell: "cat /etc/system-release"
+      register: system_release
+
+    - name: Get Apache Version (Red Hat Based)
+      become: yes
+      shell: "httpd -v && rpm -qa | grep http"
+      register: rhel_apache
+      when: "{{ system_release.stdout|trim is match('.*Rocky.*') }}"
+
+    - name: Get Apache Version (Ubuntu)
+      become: yes
+      shell: "apache2 -v && apt list --installed | grep apache"
+      register: ubuntu_apache
+
+    - name: Print RHEL Result 
+      debug: var=rhel_apache.stdout_lines
+
+    - name: Print Ubuntu Result
+      debug: var=ubuntu_apache.stdout_lines
+    

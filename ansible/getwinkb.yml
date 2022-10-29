@@ -1,0 +1,13 @@
+---
+
+  - name: Get Win KBs
+    hosts: win
+    tasks:
+
+    - name: Run PowerShell Command
+      ansible.builtin.win_shell: Get-HotFix | where {$_.InstalledOn -gt (get-date).AddDays(-30) } | sort InstalledOn > \\hfvmfs01\p&i\Patches\DSEKB\
+      args:
+        executable: powershell.exe 
+      register: pwsh_out
+      
+    - debug: var:pwsh_out.stdout_lines
