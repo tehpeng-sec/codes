@@ -1,0 +1,32 @@
+---
+  - name: LAMPP Stack Installation
+    hosts: localhost
+    tasks:
+
+    - name: Install Apache Web Server
+      become: yes
+      shell: "sudo dnf install httpd -y"
+      register: httpd_install
+
+    - name: Start Apache Web Service
+      become: yes
+      shell: "sudo systemctl enable httpd && systemctl start httpd"
+      register: httpd_service
+
+    - name: Install MySQL Server
+      become: yes
+      shell: "sudo dnf install mysql-server -y"
+      register: mysql_install
+
+    - name: Start MySQL Service
+      become: yes
+      shell: "sudo systemctl enable mysqld && systemctl start mysqld"
+      register: mysql_service
+
+    - debug: var=mysql_service.stdout_lines
+
+    - name: LAMPP Stack Check 
+      shell: "systemctl status httpd && systemctl status mysqld"
+      register: lampp_check
+
+    - debug: var=lampp_check.stdout_lines
