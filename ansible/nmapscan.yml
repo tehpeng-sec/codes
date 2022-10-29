@@ -1,0 +1,11 @@
+---
+  - name: Nmap Scanning
+    hosts: localhost
+    tasks:
+
+    - name: Scan HTTP & HTTPS 
+      become: yes
+      shell: "nmap -p 80, 443 localhost"
+      register: http_out
+
+    - debug: var=http_out.stdout_lines
