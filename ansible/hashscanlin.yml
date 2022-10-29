@@ -1,0 +1,52 @@
+---
+
+  - name: Start Hashing
+    hosts: lin
+    tasks:
+
+    - name: Get hash value of hash.txt on Ansible Tower
+      stat:
+        path: /opt/hash/hash.txt
+        checksum_algorithm: sha1
+      delegate_to: 127.0.0.1
+      register: source_info
+
+    - debug: var=source_info.stat.checksum
+
+    - name: Copy hash.txt to slave
+      copy:
+        src: /opt/hash/hash.txt
+        dest: /opt/hash/hash.txt
+        force: yes
+      register: copy_out
+
+    - name: Conver File Format
+      shell: "dos2unix hash.txt"
+      args:
+        chdir: "/opt/hash"
+      register: dos2unix_out
+
+    - name: Get hash value of hash.txt on slave
+      stat:
+        path: /opt/hash/hash.txt
+        checksum_algorithm: sha1
+      register: copy_info
+
+    - name: Fail if copy was a failure
+      fail:
+        msg: "Copy failed"
+      when: source_info.stat.checksum != copy_info.stat.checksum    
+
+    - name: Print Copy successful
+      debug:
+        msg: "Copy Successul!"
+
+    - name: Running hashing Script
+      become: yes
+      become_user: root
+      shell: "./hashscan.sh"
+      args:
+        chdir: "/opt/hash"
+      register: hashscan  
+
+    - debug: var=hashscan.stdout_lines
