@@ -1,0 +1,10 @@
+---
+  - name: Check Mongo DB Uptime
+    hosts: linux
+    tasks:
+
+    - name: Check If Mongo DB is running
+      shell: "systemctl status mongod"
+      register: mongod_info
+
+    - debug: var=mongod_info.stdout_lines
