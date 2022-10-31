@@ -21,14 +21,14 @@
 
     - debug: var=source_info.stat.checksum
 
-    - name: Copy hash.txt to slave
+    - name: Copy hashlinux.txt to slave
       copy:
         src: /opt/hash/hashlinux.txt
         dest: /opt/hash/hashlinux.txt
         force: yes
       register: copy_out
 
-    - name: Get hash value of hash.txt on slave
+    - name: Get hash value of hashlinux.txt on slave
       stat:
         path: /opt/hash/hashlinux.txt
         checksum_algorithm: sha1
