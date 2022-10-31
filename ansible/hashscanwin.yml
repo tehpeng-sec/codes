@@ -3,7 +3,7 @@
     hosts: win
     tasks:
 
-    - name: Get Properties of hash.txt
+    - name: 01 - Get Properties of hash.txt
       ansible.builtin.stat:
         path: /opt/hash/hash.txt
         get_checksum: yes
@@ -13,7 +13,7 @@
    
     - debug: var=source_info.stat.checksum
 
-    - name: Copy hash.txt to slave
+    - name: 02 - Copy hash.txt to slave
       ansible.windows.win_copy:
         src: /opt/hash/hash.txt
         dest: C:\SecurityHashScan\hash.txt
@@ -21,7 +21,7 @@
         force: yes
       register: copy_out
       
-    - name: Check Integrity of the hash.txt
+    - name: 03 - Check Integrity of the hash.txt
       ansible.windows.win_stat:
         path: C:\SecurityHashScan\hash.txt
         get_checksum: yes
@@ -30,17 +30,17 @@
 
     - debug: var=copy_info.stat.checksum
     
-    - name: Fail if copy was a failure
+    - name: 04 - Fail if copy was a failure
       ansible.builtin.fail:
         msg: "Copy Failed"
       when: source_info.stat.checksum != copy_info.stat.checksum
 
-    - name: Print Copy successful
+    - name: 05 - Print Copy successful
       debug:
         msg: "Copy Successul"
 
-    - name: Run Batch File
-      ansible.builtin.win_shell: ./winhashscan.bat
+    - name: 06 - Run Batch File
+      ansible.builtin.win_shell: .\SecurityHashScan.bat
       args:
         executable: cmd 
         chdir: C:\SecurityHashScan

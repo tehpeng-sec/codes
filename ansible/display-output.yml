@@ -1,0 +1,15 @@
+---
+
+  - name: Testing Display Settings
+    hosts: lin
+    tasks:
+
+    
+    - name: Run the shell script
+      shell: "./simple-hash.sh"
+      args:
+        chdir: /opt/hash
+      register: display_out
+
+    - debug:
+        msg: "[Warning] {{ display_out.stdout_lines }}"

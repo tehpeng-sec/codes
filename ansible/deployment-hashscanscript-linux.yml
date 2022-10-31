@@ -1,0 +1,50 @@
+---
+  - name: Hash Scanning Script Deployment
+    hosts: lin
+    tasks:
+
+    - name: Ensure hashscan.sh is Unix compatible
+      become: yes
+      shell: "dos2unix hashscan.sh"
+      args:
+        chdir: "/opt/hash"
+      delegate_to: 127.0.0.1
+      register: checkinfo_1
+
+    - name: Get SHA1 Checksum of hashscan.sh on Ansible Tower
+      stat:
+        path: /opt/hash/hashscan.sh
+        checksum_algorithm: sha1
+      delegate_to: 127.0.0.1
+      register: checkinfo_2
+
+    - debug: var=checkinfo_2.stat.checksum
+
+    - name: Copy hashscan.sh to slave
+      copy:
+        src: /opt/hash/hashscan.sh
+        dest: /opt/hash/hashscan.sh
+        force: yes
+      register: copy_out
+
+    - name: Get SHA1 Checksum of hashscan.sh on slave
+      stat:
+        path: /opt/hash/hashscan.sh
+        checksum_algorithm: sha1
+      register: checkinfo_3
+
+    - debug: var=checkinfo_3.stat.checksum
+
+    - name: Compare SHA values & fail whem mismatch
+      fail:
+        msg: "Copied failed"
+      when: checkinfo_2.stat.checksum != checkinfo_3.stat.checksum
+
+    - name: Show hashscan.sh on slave
+      become: yes
+      shell: "chmod +x hashscan.sh && ls -l hashscan.sh"
+      args:
+        chdir: "/opt/hash"
+      register: checkinfo_4
+    
+    - debug: var=checkinfo_4.stdout_lines

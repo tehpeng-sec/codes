@@ -1,10 +1,12 @@
 ---
 
   - name: Start Hashing
-    hosts: lin
+    hosts: lin #Change the host list
     tasks:
 
-    - name: Convert hash.txt to Unix format
+    # This task will create a Unix format file "hashlinux.txt" in /opt/hash/
+    # This task will be run on the Ansible Tower
+    - name: 01 - Convert hash.txt to Unix format
       become: yes
       shell: "dos2unix -n hash.txt hashlinux.txt"
       args:
@@ -12,7 +14,9 @@
       delegate_to: 127.0.0.1
       register: convert_info   
 
-    - name: Get hash value of hash.txt on Ansible Tower
+    # This task will get the SHA1 value of the hashlinux.txt
+    # Task is ran on the Ansible Tower
+    - name: 02 - Get hash value of hashlinux.txt on Ansible Tower
       stat:
         path: /opt/hash/hashlinux.txt
         checksum_algorithm: sha1
@@ -21,29 +25,35 @@
 
     - debug: var=source_info.stat.checksum
 
-    - name: Copy hashlinux.txt to slave
+    # This task will copy hashlinux.txt to the slave server.
+    - name: 03 - Copy hashlinux.txt to slave
       copy:
         src: /opt/hash/hashlinux.txt
         dest: /opt/hash/hashlinux.txt
         force: yes
       register: copy_out
 
-    - name: Get hash value of hashlinux.txt on slave
+    # This task will get the SHA1 value of the hashlinux.txt on the slave server
+    - name: 04 - Get hash value of hashlinux.txt on slave
       stat:
         path: /opt/hash/hashlinux.txt
         checksum_algorithm: sha1
       register: copy_info
 
-    - name: Fail if copy was a failure
+    - debug: var=copy_info.stat.checksum
+
+    # This task will compare the SHA1 values from tasks 02 & 04. And stop all future tasks if the SHA values mismatch
+    - name: 05 - Fail if copy was a failure
       fail:
         msg: "Copy failed"
       when: source_info.stat.checksum != copy_info.stat.checksum    
 
-    - name: Print Copy successful
+    - name: 06 - Print Copy successful
       debug:
         msg: "Copy Successul!"
 
-    - name: Running hashing Script
+    # This task will run the hashing script
+    - name: 07 - Running hashing Script
       become: yes
       become_user: root
       shell: "./hashscan.sh"

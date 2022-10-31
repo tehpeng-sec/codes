@@ -49,6 +49,7 @@ ECHO Go to C:\SecurityHashScan and check the result file:-
 ECHO  - "%computername%_Result_C_drive_%date:~10,4%%date:~4,2%%date:~7,2%.txt"
 ECHO  - "%computername%_Result_D_drive_%date:~10,4%%date:~4,2%%date:~7,2%.txt"
 REM ECHO  - "%computername%_Result_E_drive_%date:~10,4%%date:~4,2%%date:~7,2%.txt"
+dir /o-d C:\SecurityHashScan\
 ECHO:
 pause
 exit
