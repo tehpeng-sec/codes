@@ -1,0 +1,18 @@
+---
+  - name: Hashing
+    hosts: win
+    tasks:
+
+    - name: Hashing Files in C Drive
+      ansible.builtin.win_shell: "hashdeep64.exe -r -c sha1,sha256,md5 c:\ > c:\%computername%_C_drive_%date:~10,4%%date:~4,2%%date:~7,2%.txt 2> C:\%computername%_C_drive_excluded_%date:~10,4%%date:~4,2%%date:~7,2%.txt"
+      args:
+        executable: cmd
+        chdir: C:\
+      register: C_Drive
+
+    - name: Hashing Files in D Drive
+      ansible.builtin.win_shell: "hashdeep64.exe -r -c sha1,sha256,md5 D:\ > c:\%computername%_D_drive_%date:~10,4%%date:~4,2%%date:~7,2%.txt 2> C:\%computername%_D_drive_excluded_%date:~10,4%%date:~4,2%%date:~7,2%.txt"
+      args:
+        executable: cmd
+        chdir: C:\
+      register: D_Drive
