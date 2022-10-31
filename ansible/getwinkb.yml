@@ -10,4 +10,4 @@
         executable: powershell.exe 
       register: pwsh_out
       
-    - debug: var:pwsh_out.stdout_lines
+    - debug: var:pwsh_out.stdout_lines 
