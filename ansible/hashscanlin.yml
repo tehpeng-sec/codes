@@ -4,9 +4,17 @@
     hosts: lin
     tasks:
 
+    - name: Convert hash.txt to Unix format
+      become: yes
+      shell: "dos2unix -input hash.txt -output hashlinux.txt"
+      args:
+        chdir: "/opt/hash"
+      delegate_to: 127.0.0.1
+      register: hashscan      
+
     - name: Get hash value of hash.txt on Ansible Tower
       stat:
-        path: /opt/hash/hash.txt
+        path: /opt/hash/hashlinux.txt
         checksum_algorithm: sha1
       delegate_to: 127.0.0.1
       register: source_info
@@ -15,20 +23,14 @@
 
     - name: Copy hash.txt to slave
       copy:
-        src: /opt/hash/hash.txt
-        dest: /opt/hash/hash.txt
+        src: /opt/hash/hashlinux.txt
+        dest: /opt/hash/hashlinux.txt
         force: yes
       register: copy_out
 
-    - name: Conver File Format
-      shell: "dos2unix hash.txt"
-      args:
-        chdir: "/opt/hash"
-      register: dos2unix_out
-
     - name: Get hash value of hash.txt on slave
       stat:
-        path: /opt/hash/hash.txt
+        path: /opt/hash/hashlinux.txt
         checksum_algorithm: sha1
       register: copy_info
 
