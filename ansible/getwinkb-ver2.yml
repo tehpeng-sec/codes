@@ -1,0 +1,18 @@
+---
+  - name: Retrieve Windows Update History
+    hosts: win
+    tasks:
+
+    - name: List Windows Updates
+      ansible.windows.win_updates:
+        category_names: SecurityUpdates
+        state: downloaded
+        log_path: C:\ansible_wu.txt
+
+    - name: Display Update History
+      ansible.builtin.win_shell: "type C:\ansible_wu.txt"
+      args:
+        executable: cmd
+      register: display_out
+
+    - debug: var=display_out.stdout_lines
