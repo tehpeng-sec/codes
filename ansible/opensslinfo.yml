@@ -1,6 +1,6 @@
 ---
   - name: Gather OpenSSl Information
-    hosts: lin
+    hosts: linux
     tasks:
 
     - name: Get OpenSSl Version
