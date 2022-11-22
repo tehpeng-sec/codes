@@ -29,7 +29,7 @@
 ###############################################################################
 
 
-- hosts: all
+- hosts: localhost
   vars:
     var_system_crypto_policy: !!str DEFAULT
     var_sudo_logfile: !!str /var/log/sudo.log
