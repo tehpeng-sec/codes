@@ -56,7 +56,7 @@
     - name: 07 - Running hashing Script
       become: yes
       become_user: root
-      shell: "./hashscan.sh"
+      shell: "./SecurityHashScan.sh"
       args:
         chdir: "/opt/hash"
       register: hashscan  
