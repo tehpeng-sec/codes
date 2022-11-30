@@ -43,7 +43,7 @@ echo "Processed $filecount files"
 
 echo "Comparing hashes..."
 #remove blank line in hash.txt as it will affect the grep
-grep -w --color=always --file hashlinux.txt $FILENAME > $RESULT
+grep -w --color=always --file hash.txt $FILENAME > $RESULT
 echo "Completed"
 ls -lh "$RESULT"
 cat "$RESULT"
