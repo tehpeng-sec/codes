@@ -1,18 +1,17 @@
-
 # Enter Resource Group of VM
-$sourceRG = "RG-Infra" 
+$sourceRG = "" 
 
 # Enter the name of CMK encrypted disk
-$sourceDiskName = "azsspprdmz01-osdisk-20211101-073357" # Enter the name of CMK encrypted disk
+$sourceDiskName = "" # Enter the name of CMK encrypted disk
 
 # Enter the name of the new disk. This disk will be PMK encrypted 
-$targetDiskName = "azcmksspcopy02" 
+$targetDiskName = "" 
 
 # Enter the Resounce Group of the new disk
-$targetRG = "RG-Infra" 
+$targetRG = "" 
 
 # Enter the location (Default: South East Asia)
-$targetLocate = "Southeast Asia" # Enter the location (Default: South East Asia)
+$targetLocate = "Southeast Asia"
 
 $sourceDisk = Get-AzDisk -ResourceGroupName $sourceRG -DiskName $sourceDiskName
 
