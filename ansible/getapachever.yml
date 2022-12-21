@@ -1,8 +1,5 @@
 ---
-  # This task will get necessary information about Apache installed
-  - name: Get Apache Info
-    hosts: localhost #Change Host Inventory
-    tasks:
+
 
     # Reterive Apache Version
     - name: Get Apache Version
