@@ -1,0 +1,7 @@
+---
+
+  - name: Get Hostname
+    shell: "hostname"
+    register: hostname_out
+
+  - debug: var=hostname_out.stdout_lines
