@@ -3,5 +3,5 @@
 $A = Get-Content -Path C:\checkkb\Servers.txt
 
 $A | ForEach-Object {
-    Invoke-Command -ComputerName $_ -ScriptBlock{Get-HotFix | where {$_.InstalledOn -gt (get-date).AddDays(-30) } | sort InstalledOn} > $newdir\$_.txt
+    Invoke-Command -ComputerName $_ -ScriptBlock{Get-HotFix | where {$_.InstalledOn -gt "09/01/2022" -AND $_.InstalledOn -lt "09/30/2022" } | sort InstalledOn} > $newdir\$_.txt
 }
