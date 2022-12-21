@@ -1,7 +1,4 @@
 ---
-  - name: Gather OpenSSl Information
-    hosts: linux
-    tasks:
 
     - name: Get OpenSSl Version
       become: yes
