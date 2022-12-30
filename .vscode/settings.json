@@ -1,6 +1,2 @@
 {
-    "sonarlint.connectedMode.project": {
-        "connectionId": "http-azpocsonarqb-australiaeast-cloudapp-azure-com-9000-",
-        "projectKey": "VSCode"
-    }
 }
