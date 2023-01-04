@@ -10,7 +10,7 @@
       become: yes
       shell: "dos2unix -n hash.txt hashlinux.txt"
       args:
-        chdir: "/opt/hash"
+        chdir: "/tmp/hash"
       delegate_to: 127.0.0.1
       register: convert_info   
 
@@ -18,7 +18,7 @@
     # Task is ran on the Ansible Tower
     - name: 02 - Get hash value of hashlinux.txt on Ansible Tower
       stat:
-        path: /opt/hash/hashlinux.txt
+        path: /tmp/hash/hashlinux.txt
         checksum_algorithm: sha1
       delegate_to: 127.0.0.1
       register: source_info
@@ -28,15 +28,15 @@
     # This task will copy hashlinux.txt to the slave server.
     - name: 03 - Copy hashlinux.txt to slave
       copy:
-        src: /opt/hash/hashlinux.txt
-        dest: /opt/hash/hashlinux.txt
+        src: /tmp/hash/hashlinux.txt
+        dest: /tmp/hash/hashlinux.txt
         force: yes
       register: copy_out
 
     # This task will get the SHA1 value of the hashlinux.txt on the slave server
     - name: 04 - Get hash value of hashlinux.txt on slave
       stat:
-        path: /opt/hash/hashlinux.txt
+        path: /tmp/hash/hashlinux.txt
         checksum_algorithm: sha1
       register: copy_info
 
@@ -58,7 +58,7 @@
       become_user: root
       shell: "./SecurityHashScan.sh"
       args:
-        chdir: "/opt/hash"
+        chdir: "/tmp/hash"
       register: hashscan  
 
     - debug: var=hashscan.stdout_lines
