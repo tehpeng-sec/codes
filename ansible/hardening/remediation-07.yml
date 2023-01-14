@@ -31,7 +31,13 @@
 
 - hosts: localhost
   vars:
-    login_banner_text: !!str ^(This[\s\n]+is[\s\n]+a[\s\n]+protected[\s\n]+system[\s\n]+and[\s\n]+is[\s\n]+forauthorized[\s\n]+users[\s\n]+only\.(?:[\n]+|(?:\\n)+)DO[\s\n]+NOT[\s\n]+LOGON[\s\n]+unless[\s\n]+you[\s\n]+are[\s\n]+an[\s\n]+authorized[\s\n]+user.*)$
+    ssh_banner: |
+        This is a protected system and is for authorized users only.
+        DO NOT LOGON unless you are an authorized user.
+        Individuals who attempt unauthorized access will be prosecuted.
+    login_banner_text: |
+        This system is configured to meet CIS CentOS Linux 7 Benchmark v3.1.1
+        Please refer to www.cisecurity.org for more information.
     var_password_pam_remember: !!str 5
     var_password_pam_remember_control_flag: !!str required
     var_password_pam_unix_remember: !!str 7
@@ -287,9 +293,7 @@
     - name: Modify the System Login Banner - ensure correct banner
       copy:
         dest: /etc/issue
-        content: '{{ login_banner_text | regex_replace("^\^(.*)\$$", "\1") | regex_replace("^\((.*\.)\|.*\)$",
-          "\1") | regex_replace("\[\\s\\n\]\+"," ") | regex_replace("\(\?:\[\\n\]\+\|\(\?:\\\\n\)\+\)",
-          "\n") | regex_replace("\\", "") | wordwrap() }}'
+        content: "{{ ssh_banner }}"
       when: ansible_virtualization_type not in ["docker", "lxc", "openvz", "podman", "container"]
       tags:
       - CCE-27303-7
@@ -311,9 +315,7 @@
     - name: Modify the System Message of the Day Banner - ensure correct banner
       copy:
         dest: /etc/motd
-        content: '{{ login_banner_text | regex_replace("^\^(.*)\$$", "\1") | regex_replace("^\((.*\.)\|.*\)$",
-          "\1") | regex_replace("\[\\s\\n\]\+"," ") | regex_replace("\(\?:\[\\n\]\+\|\(\?:\\\\n\)\+\)",
-          "\n") | regex_replace("\\", "") | wordwrap() }}'
+        content: "{{ login_banner_text }}"
       when: ansible_virtualization_type not in ["docker", "lxc", "openvz", "podman", "container"]
       tags:
       - CCE-83394-7
@@ -7849,4 +7851,4 @@
       - reboot_required
       - restrict_strategy
       - xwindows_runlevel_target
-
+      
