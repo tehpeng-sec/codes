@@ -5,7 +5,7 @@
 
     - name: 01 - Get Properties of hash.txt
       ansible.builtin.stat:
-        path: /opt/hash/hash.txt
+        path: /tmp/hash/hash.txt
         get_checksum: yes
         checksum_algorithm: sha1
       delegate_to: 127.0.0.1
@@ -15,7 +15,7 @@
 
     - name: 02 - Copy hash.txt to slave
       ansible.windows.win_copy:
-        src: /opt/hash/hash.txt
+        src: /tmp/hash/hash.txt
         dest: C:\SecurityHashScan\hash.txt
         remote_src: no 
         force: yes
