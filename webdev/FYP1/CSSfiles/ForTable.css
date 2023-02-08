@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* CSS Document */
+
+ table {
+  font: "lucida grande","lucida sans unicode",geogrotesque,arial,verdana,tahoma,sans-serif;
+  border-collapse: collapse;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top: 10px;
+
+}
+/*sidebar CSS*/
+.sidebar td{
+  border: 1px solid #dddddd;
+  text-align: center;
+  	
+}
+
+.categories, .subCategories{
+    text-align: left;
+}
+
+.sidebar th{
+	background: #ACFFF7
+}
+
+.sidebar td li{
+	list-style-type: none;
+}
+
+
+
+.smallfont{
+    font: 11px "lucida grande","lucida sans unicode",geogrotesque,arial,verdana,tahoma,sans-serif;
+        
+}
+.categories{
+    font: bold 10pt "lucida grande","lucida sans unicode",geogrotesque,arial,verdana,tahoma,sans-serif;
+}
+.categories .smallfont{
+    text-align: left;
+}
+
+a[href], input[type='submit'], input[type='image'], label[for], select, button, .pointer, #pointer {
+       cursor: pointer;
+}
+
+.messagefont{
+    font: 13px "lucida grande","lucida sans unicode",geogrotesque,arial,verdana,tahoma,sans-serif;
+    text-align: left;
+}
+@media screen{
+}

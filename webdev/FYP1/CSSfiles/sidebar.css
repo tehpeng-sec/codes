@@ -1,0 +1,19 @@
+@charset "utf-8";
+.sidebar {
+	/* Sidebar*/
+	width: 30%;
+	float: center;
+	background-color: rgba(246,246,246,1.00);
+	margin-top: 55px;
+}
+.sidebar td{
+    text-align: left;
+}
+
+#mainContent{
+    padding-left: 2%;
+    width: 60%;
+    float: left;
+	padding-right: 2%;
+	padding-top: 41px;
+}
