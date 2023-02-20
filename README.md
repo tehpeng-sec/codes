@@ -1,2 +1,2 @@
 # codes
-Repo for all the scripts I wrote.
+Dumping Ground so I can access all my files form anywhere haha
