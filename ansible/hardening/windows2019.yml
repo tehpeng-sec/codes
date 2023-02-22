@@ -1,0 +1,94 @@
+---
+- name: Harden Windows Server 2019
+  hosts: windows_host
+  gather_facts: no
+  vars:
+    admin_username: "admin" # Change to the username of a local administrator account
+    admin_password: "admin_password" # Change to the password of the local administrator account
+  tasks:
+    - name: Ensure Windows Defender is installed and up-to-date
+      win_defender:
+        state: present
+        definition_update: true
+        scheduled_scan_time: 03:00
+        scheduled_quick_scan: true
+        scheduled_full_scan: true
+
+    - name: Enable Windows Firewall and configure rules
+      win_firewall:
+        state: on
+        profile: domain,private,public
+        inbound:
+          - name: "Allow RDP"
+            port: "3389"
+            protocol: tcp
+            action: allow
+          - name: "Allow HTTP"
+            port: "80"
+            protocol: tcp
+            action: allow
+          - name: "Allow HTTPS"
+            port: "443"
+            protocol: tcp
+            action: allow
+        outbound:
+          - name: "Allow DNS"
+            port: "53"
+            protocol: udp
+            action: allow
+          - name: "Allow HTTP"
+            port: "80"
+            protocol: tcp
+            action: allow
+          - name: "Allow HTTPS"
+            port: "443"
+            protocol: tcp
+            action: allow
+
+    - name: Disable SMBv1
+      win_shell: Disable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol -NoRestart
+
+    - name: Enable SMBv2 and SMBv3
+      win_reg_stat:
+        path: "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\LanmanServer\\Parameters"
+        name: "SMB1"
+        value_type: dword
+        data: 0
+        state: absent
+      register: reg_stat
+      changed_when: reg_stat.changed
+
+    - name: Ensure Guest account is disabled
+      win_user:
+        name: "Guest"
+        state: absent
+        system: yes
+
+    - name: Ensure password complexity requirements are met
+      win_security_policy:
+        name: "Password must meet complexity requirements"
+        policy_type: account
+        value: "Enabled"
+
+    - name: Ensure audit policies are set correctly
+      win_audit_policy_system:
+        audit_policy_subcategory: "Audit Policy Change"
+        subcategory_settings: "Success,Failure"
+      win_audit_policy_security:
+        audit_policy_subcategory: "Audit Account Management"
+        subcategory_settings: "Success,Failure"
+      win_audit_policy_object:
+        audit_policy_subcategory: "Audit File System"
+        subcategory_settings: "Success,Failure"
+
+    - name: Ensure User Account Control (UAC) is enabled
+      win_security_policy:
+        name: "User Account Control: Run all administrators in Admin Approval Mode"
+        policy_type: user
+        value: "Enabled"
+
+    - name: Ensure Remote Desktop Services (RDS) are configured securely
+      win_security_policy:
+        name: "Network security: Restrict NTLM: Outgoing NTLM traffic to remote servers"
+        policy_type: machine
+        value:
