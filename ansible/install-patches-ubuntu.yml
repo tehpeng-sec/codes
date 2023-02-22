@@ -1,6 +1,6 @@
 ---
 - name: Patch Ubuntu servers
-  hosts: ubuntu_servers
+  hosts: localhost
   become: yes
 
   tasks:
