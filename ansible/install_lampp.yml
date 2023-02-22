@@ -1,0 +1,35 @@
+---
+- name: Install LAMPP stack
+  hosts: all
+  become: true
+  tasks:
+    - name: Install Apache package
+      yum:
+        name: httpd
+        state: present
+
+    - name: Install MariaDB package
+      yum:
+        name: mariadb-server
+        state: present
+
+    - name: Install PHP packages
+      yum:
+        name:
+          - php
+          - php-mysqlnd
+          - php-gd
+          - php-mbstring
+        state: present
+
+    - name: Start Apache service
+      service:
+        name: httpd
+        state: started
+        enabled: true
+
+    - name: Start MariaDB service
+      service:
+        name: mariadb
+        state: started
+        enabled: true
