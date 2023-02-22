@@ -1,0 +1,29 @@
+---
+- name: Backup MySQL database
+  hosts: localhost
+  vars:
+    db_name: my_database
+    backup_dir: /var/backups/mysql
+
+  tasks:
+    - name: Create backup directory
+      file:
+        path: "{{ backup_dir }}"
+        state: directory
+
+    - name: Dump MySQL database
+      become: true
+      command: mysqldump {{ db_name }} > {{ backup_dir }}/{{ db_name }}_{{ ansible_date_time.date }}.sql
+
+    - name: Compress backup file
+      become: true
+      command: gzip {{ backup_dir }}/{{ db_name }}_{{ ansible_date_time.date }}.sql
+
+    - name: Delete old backups
+      become: true
+      find:
+        paths: "{{ backup_dir }}"
+        patterns: "{{ db_name }}*.sql.gz"
+        age: "7d"
+        type: "f"
+        delete: true

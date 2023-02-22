@@ -1,0 +1,56 @@
+---
+- name: Install and configure Webmin
+  hosts: localhost
+  become: yes
+
+  vars:
+    webmin_port: 10000  # Change this to the desired port number
+    webmin_user: admin  # Change this to the desired username
+    webmin_password: password  # Change this to the desired password
+
+  tasks:
+    - name: Install Webmin dependencies
+      dnf:
+        name:
+          - perl
+          - perl-Net-SSLeay
+          - openssl
+          - perl-IO-Tty
+          - perl-Encode-Detect
+        state: present
+
+    - name: Download and install Webmin GPG key
+      rpm_key:
+        key: http://www.webmin.com/jcameron-key.asc
+        state: present
+
+    - name: Create Webmin repository
+      copy:
+        dest: /etc/yum.repos.d/webmin.repo
+        content: |
+          [Webmin]
+          name=Webmin Distribution Neutral
+          #baseurl=http://download.webmin.com/download/yum
+          mirrorlist=http://download.webmin.com/download/yum/mirrorlist
+          enabled=1
+
+    - name: Install Webmin package
+      dnf:
+        name: webmin
+        state: present
+
+    - name: Configure Webmin user
+      shell: /usr/libexec/webmin/changepass.pl /etc/webmin {{ webmin_user }} {{ webmin_password }}
+      args:
+        executable: /bin/bash
+
+    - name: Configure Webmin port
+      lineinfile:
+        path: /etc/webmin/miniserv.conf
+        regexp: '^port='
+        line: 'port={{ webmin_port }}'
+
+    - name: Restart Webmin service
+      systemd:
+        name: webmin.service
+        state: restarted

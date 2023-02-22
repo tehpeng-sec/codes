@@ -1,23 +1,13 @@
 ---
-- name: Patch Red Hat Linux servers
-  hosts: localhost
-  become: yes
+- name: Retrieve and install patches on Red Hat 8 server
+  hosts: redhat_server
+  become: true
 
   tasks:
-    - name: Update package cache
-      yum:
-        update_cache: yes
+    - name: Check for available updates
+      redhat_subscription:
+        state: list
 
     - name: Install available updates
-      yum:
-        name: "*"
+      redhat_subscription:
         state: latest
-
-    - name: Reboot servers if updates require it
-      reboot:
-        msg: "Updates installed, rebooting now."
-        connect_timeout: 10
-        reboot_timeout: 600
-        pre_reboot_delay: 0
-        post_reboot_delay: 30
-      when: ansible_reboot_pending | bool

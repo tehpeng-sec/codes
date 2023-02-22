@@ -1,0 +1,56 @@
+---
+- name: Create new virtual machine in Azure
+  hosts: localhost
+  connection: local
+  gather_facts: no
+
+  vars:
+    resource_group: my_resource_group
+    vm_name: my_vm
+    vm_size: Standard_B2s
+    admin_username: myadmin
+    admin_password: mypassword
+    os_type: linux
+    image_publisher: Canonical
+    image_offer: UbuntuServer
+    image_sku: 18.04-LTS
+    location: eastus
+    ssh_public_key: /path/to/ssh_public_key.pub
+    nic_name: my_nic
+    vnet_name: my_vnet
+    subnet_name: my_subnet
+
+  tasks:
+    - name: Create network interface
+      azure_rm_networkinterface:
+        resource_group: "{{ resource_group }}"
+        name: "{{ nic_name }}"
+        virtual_network_name: "{{ vnet_name }}"
+        subnet_name: "{{ subnet_name }}"
+      register: nic
+
+    - name: Create virtual machine
+      azure_rm_virtualmachine:
+        resource_group: "{{ resource_group }}"
+        name: "{{ vm_name }}"
+        vm_size: "{{ vm_size }}"
+        admin_username: "{{ admin_username }}"
+        admin_password: "{{ admin_password }}"
+        image:
+          offer: "{{ image_offer }}"
+          publisher: "{{ image_publisher }}"
+          sku: "{{ image_sku }}"
+          version: latest
+        location: "{{ location }}"
+        os_type: "{{ os_type }}"
+        network_interface_names:
+          - "{{ nic.name }}"
+        ssh_password_enabled: False
+        ssh_public_keys:
+          - path: /home/{{ admin_username }}/.ssh/authorized_keys
+            key_data: "{{ lookup('file', ssh_public_key) }}"
+      register: vm
+
+    - name: Display virtual machine details
+      debug:
+        var: vm
