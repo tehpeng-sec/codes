@@ -4,7 +4,7 @@
     hosts: linux #Change the host list
     tasks:
 
-    # This task will create a Unix format file "hashlinux.txt" in /opt/hash/
+    # This task will create a Unix format file "hashlinux.txt" in /tmp/hash/
     # This task will be run on the Ansible Tower
     - name: 01 - Convert hash.txt to Unix format
       become: yes
@@ -27,6 +27,7 @@
 
     # This task will copy hashlinux.txt to the slave server.
     - name: 03 - Copy hashlinux.txt to slave
+      become: yes
       copy:
         src: /tmp/hash/hashlinux.txt
         dest: /tmp/hash/hashlinux.txt
