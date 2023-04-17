@@ -7,7 +7,6 @@
     # This task will create a Unix format file "hashlinux.txt" in /tmp/hash/
     # This task will be run on the Ansible Tower
     - name: 01 - Convert hash.txt to Unix format
-      become: yes
       shell: "dos2unix -n hash.txt hashlinux.txt"
       args:
         chdir: "/tmp/hash"
