@@ -11,7 +11,7 @@ $targetDiskName = ""
 $targetRG = "" 
 
 # Enter the location (Default: South East Asia)
-$targetLocate = "Southeast Asia"
+$targetLocate = ""
 
 $sourceDisk = Get-AzDisk -ResourceGroupName $sourceRG -DiskName $sourceDiskName
 
@@ -24,6 +24,7 @@ $sourceDiskSas = Grant-AzDiskAccess -ResourceGroupName $sourceRG -DiskName $sour
 
 $targetDiskSas = Grant-AzDiskAccess -ResourceGroupName $targetRG -DiskName $targetDiskName -DurationInSecond 86400 -Access 'Write'
 
+# Change the location of the azcopy based on your location
 C:\azcopy\azcopy copy $sourceDiskSas.AccessSAS $targetDiskSas.AccessSAS --blob-type PageBlob
 
 Revoke-AzDiskAccess -ResourceGroupName $sourceRG -DiskName $sourceDiskName

@@ -11,7 +11,7 @@ $targetDiskName = ""
 $targetRG = ""
 
 # Enter the location (Default: South East Asia)
-$targetLocate = "Southeast Asia"
+$targetLocate = ""
 
 #Expected value for OS is either "Windows" or "Linux"
 $targetOS = ""
