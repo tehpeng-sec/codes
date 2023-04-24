@@ -1,0 +1,123 @@
+db.col01.insertMany([  
+  {
+    title: "Post Title 2",
+    body: "Body of post.",
+    category: "Event",
+    likes: 2,
+    tags: ["news", "events"],
+    date: Date()
+  },
+  {
+    title: "Post Title 3",
+    body: "Body of post.",
+    category: "Technology",
+    likes: 3,
+    tags: ["news", "events"],
+    date: Date()
+  },
+  {
+    title: "Post Title 4",
+    body: "Body of post.",
+    category: "Event",
+    likes: 4,
+    tags: ["news", "events"],
+    date: Date()
+  }
+])
+
+db.col01.insertOne({
+  title: "Post Title 1",
+  body: "Body of post.",
+  category: "News",
+  likes: 1,
+  tags: ["news", "events"],
+  date: Date()
+})
+
+
+db.classA1.insertOne({
+	student_first_name: "Swam Pyae",
+	student_last_name: "Sone",
+	student_age: 19,
+	student_gender: "Male",
+	student_score: 76,
+	student_hair_short: false
+})
+
+db.classA1.insertMany([
+	{
+		student_first_name: "Jackson",
+		student_last_name: "Lim",
+		student_age: 19,
+		student_gender: "Male",
+		student_score: 90,
+		student_hair_short: true
+	},
+	{
+		student_first_name: "Hayley",
+		student_last_name: "Loh",
+		student_age: 19,
+		student_gender: "Female",
+		student_score: 98,
+		student_hair_short: false
+	},
+	{
+		student_first_name: "Agnes",
+		student_last_name: "Tan",
+		student_age: 19,
+		student_gender: "Femal",
+		student_score: 50,
+		student_hair_short: false
+	},
+	{
+		student_first_name: "Sean",
+		student_last_name: "Tan",
+		student_age: 19,
+		student_gender: "Male",
+		student_score: 76,
+		student_hair_short: false
+	}
+])
+
+db.classB1.insertMany([
+	{
+		student_first_name: "Henry",
+		student_last_name: "Lam",
+		student_age: 19,
+		student_gender: "Male",
+		student_score: 34,
+		student_hair_short: true
+	},
+	{
+		student_first_name: "Yi Ling",
+		student_last_name: "Low",
+		student_age: 19,
+		student_gender: "Female",
+		student_score: 65,
+		student_hair_short: false
+	},
+	{
+		student_first_name: "Agnes",
+		student_last_name: "Low",
+		student_age: 19,
+		student_gender: "Female",
+		student_score: 60,
+		student_hair_short: false
+	},
+	{
+		student_first_name: "Shawn",
+		student_last_name: "Ma",
+		student_age: 19,
+		student_gender: "Male",
+		student_score: 20,
+		student_hair_short: true
+	},
+	{
+		student_first_name: "Janice",
+		student_last_name: "Ha",
+		student_age: 19,
+		student_gender: "Female",
+		student_score: 100,
+		student_hair_short: false
+	}
+])
