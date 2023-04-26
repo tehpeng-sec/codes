@@ -58,7 +58,7 @@
       become_user: root
       shell: "./SecurityHashScan.sh"
       args:
-        chdir: "/tmp/hash"
+        chdir: "/opt/hash"
       register: hashscan  
 
     - debug: var=hashscan.stdout_lines
