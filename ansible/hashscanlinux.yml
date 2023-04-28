@@ -10,7 +10,7 @@
       shell: "dos2unix -n hash.txt hashlinux.txt"
       args:
         chdir: "/tmp/hash"
-      delegate_to: 127.0.0.1
+      delegate_to: azanwspr01.pseraya.com.sg
       register: convert_info   
 
     # This task will get the SHA1 value of the hashlinux.txt
@@ -18,8 +18,8 @@
     - name: 02 - Get hash value of hashlinux.txt on Ansible Tower
       stat:
         path: /tmp/hash/hashlinux.txt
-        checksum_algorithm: sha1
-      delegate_to: 127.0.0.1
+        checksum_algorithm: md5
+      delegate_to: azanwspr01.pseraya.com.sg
       register: source_info
 
     - debug: var=source_info.stat.checksum
@@ -37,7 +37,7 @@
     - name: 04 - Get hash value of hashlinux.txt on slave
       stat:
         path: /tmp/hash/hashlinux.txt
-        checksum_algorithm: sha1
+        checksum_algorithm: md5
       register: copy_info
 
     - debug: var=copy_info.stat.checksum
