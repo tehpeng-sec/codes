@@ -10,7 +10,7 @@
       shell: "dos2unix -n hash.txt hashlinux.txt"
       args:
         chdir: "/tmp/hash"
-      delegate_to: azanwspr01.pseraya.com.sg
+      delegate_to: <hostname/FQDN> # put in the hostname or the FQDN of the machine you want to assaign to
       register: convert_info   
 
     # This task will get the SHA1 value of the hashlinux.txt
@@ -19,7 +19,7 @@
       stat:
         path: /tmp/hash/hashlinux.txt
         checksum_algorithm: md5
-      delegate_to: azanwspr01.pseraya.com.sg
+      delegate_to: <hostname/FQDN> # put in the hostname or the FQDN of the machine you want to assaign to
       register: source_info
 
     - debug: var=source_info.stat.checksum
