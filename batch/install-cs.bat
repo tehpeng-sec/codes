@@ -1,17 +1,41 @@
 @echo off
-set HOST=8.8.8.8
-set PORT=443
+set PROXY-IP=8.8.8.8
+set PROXY-PORT=443
+set HF-IP=127.0.0.1
+set HF-PORT1=8089
+set HF-PORT2=9997
 
 :: Use PowerShell to test the network connection
-powershell -command "Test-NetConnection -ComputerName %HOST% -Port %PORT%" | findstr "TcpTestSucceeded: True" >nul
+powershell -command "Test-NetConnection -ComputerName %PROXY-IP% -Port %PROXY-PORT%" | findstr "TcpTestSucceeded: True" >nul
 
-:: Check the errorlevel to see if the connection was successful
+:: TelNet Proxy
 if %errorlevel% neq 0 (
-    echo Test-NetConnection to %HOST%:%PORT% failed.
+    echo Connection to proxy failed
     exit /b 1
 ) else (
-    echo Test-NetConnection to %HOST%:%PORT% was successful.
-    ping %HOST%
-)
+    echo Connection to proxy is successful
 
-:: Continue with the rest of your script here
+    powershell -command "Test-NetConnection -ComputerName %HF-IP% -Port %HF-PORT1%" | findstr "TcpTestSucceeded: True" >nul
+
+    :: TelNet HF
+    if %errorlevel% neq 0 (
+        echo Connection to HF at port %HF-PORT1% failed
+        exit /b 1
+
+    ) else (
+        echo Connection to HF at port %HF-PORT1% is successful
+
+        powershell -command "Test-NetConnection -ComputerName %HF-IP% -Port %HF-PORT2%" | findstr "TcpTestSucceeded: True" >nul
+
+        if %errorlevel% neq 0 (
+            echo Connection to HF at port %HF-PORT2% failed
+            exit /b 1
+        ) else (
+            echo Connection to HF at port %HF-PORT2% is successful
+
+            :: Install CS
+            cmd WindowsSensor.exe /install /quiet /norestart CID=<your CID> APP_PROXYNAME=%PROXY-IP% APP_PROXYPORT=%PROXY-PORT% /log %cd%\%computername%_cs.txt
+        )
+    )
+
+)
