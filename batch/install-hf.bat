@@ -1,8 +1,12 @@
 @echo off
 setlocal
 
+/L*v logfile.txt
+
+AGREETOLICENSE=yes SPLUNKUSERNAME=SplunkAdmin SPLUNKPASSWORD=Ch@ng3d!
+
 :: Define the path to the Splunk Heavy Forwarder installer
-set SPLUNK_INSTALLER=splunkforwarder-<version>-<platform>.msi
+set SPLUNK_INSTALLER=splunkforwarder-<version>-<platform>.msi /L*v logfile.txt
 
 :: Define the installation directory
 set INSTALL_DIR=C:\Program Files\SplunkUniversalForwarder
