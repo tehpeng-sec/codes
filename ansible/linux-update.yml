@@ -1,0 +1,29 @@
+---
+- name: Update Linux Server
+  hosts: localhost
+  become: true
+
+  tasks:
+    - name: Check OS type
+      ansible.builtin.debug:
+        var: ansible_distribution
+
+    - name: List out patches based on OS version
+      ansible.builtin.debug:
+        var: ansible_distribution_version
+      register: os_version
+
+    - name: Update based on OS version
+      ansible.builtin.yum:
+        name: "*"
+        state: latest
+      when: "'RedHat' in ansible_distribution"
+
+    - name: Update based on OS version (for Ubuntu)
+      ansible.builtin.apt:
+        upgrade: "dist"
+      when: "'Ubuntu' in ansible_distribution"
+
+    - name: Print "Update Successful"
+      ansible.builtin.debug:
+        msg: "Update Successful"
