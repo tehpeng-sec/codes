@@ -1,0 +1,21 @@
+CVE NIST [Critical]
+==========================================
+let
+    // Define the base URL of the API endpoint
+    baseUrl = "https://services.nvd.nist.gov/rest/json/cves/2.0",
+
+    // Define parameters
+    pubStartDate = "2024-06-01T00:00:00.000",
+    pubEndDate = "2024-06-17T00:00:00.000",
+    cvssV3Severity = "CRITICAL",
+
+    // Construct the complete URL with parameters
+    apiUrl = baseUrl &
+        "?pubStartDate=" & Uri.EscapeDataString(pubStartDate) &
+        "&pubEndDate=" & Uri.EscapeDataString(pubEndDate) &
+        "&cvssV3Severity=" & Uri.EscapeDataString(cvssV3Severity),
+
+    // Make the HTTP reques
+    response = Json.Document(Web.Contents(apiUrl))
+in
+    response
