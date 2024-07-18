@@ -7,3 +7,5 @@ Install VBox Guest - RHEL
 3) sudo dnf install dkms kernel-devel kernel-headers gcc make bzip2 perl elfutils-libelf-devel
 
 4) sudo dnf update kernel-*
+
+sudo firewall-cmd --permanent --add-port=27017/tcp
