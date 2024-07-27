@@ -1,0 +1,89 @@
+[
+  {
+    "{'as_owner': 'Singtel Fibre Broadband', 'asn': 9506, 'country': 'SG', 'detected_urls': [], 'resolutions': [], 'response_code': 1, 'verbose_msg': 'IP address in dataset'}": ""
+  },
+  {
+    "{'as_owner': '20 Dover Drive Singapore 138682', 'asn': 55919, 'country': 'SG', 'detected_downloaded_samples': [], 'detected_urls': [], 'resolutions': [{'hostname': 'device-09de53c3-c303-4132-9e3d-7954d69aef07.remotewd.com', 'last_resolved': '2021-04-24 04:08:44'}], 'response_code': 1, 'undetected_downloaded_samples': [], 'undetected_urls': [['http://103.24.77.60/', 'e31f2c4f8123906428dec6167799b37a0437cb027fc585cef20833863cfdc5f2', 0, 79, '2020-07-24 11:53:59']], 'verbose_msg': 'IP address in dataset'}": ""
+  },
+  {
+    "{'as_owner': 'MyRepublic Ltd.', 'asn': 56300, 'country': 'SG', 'detected_urls': [], 'resolutions': [{'hostname': 'device-854fc0f1-2734-4148-ba2c-4a7dc0b97b93.remotewd.com', 'last_resolved': '2022-05-13 22:42:35'}, {'hostname': 'zohar.myqnapcloud.com', 'last_resolved': '2022-07-02 22:05:24'}], 'response_code': 1, 'verbose_msg': 'IP address in dataset'}": ""
+  },
+  {
+    "{'as_owner': 'MyRepublic Ltd.', 'asn': 56300, 'country': 'SG', 'detected_urls': [{'positives': 2, 'scan_date': '2023-12-20 15:01:12', 'total': 91, 'url': 'http://103.252.202.195/'}], 'resolutions': [{'hostname': 'device-ce5a6517-2875-416f-8040-f72c6847dae2.remotewd.com', 'last_resolved': '2022-02-03 10:31:07'}, {'hostname': 'ggjjhome.direct.quickconnect.to', 'last_resolved': '2022-09-16 16:30:56'}, {'hostname': 'nastrex.direct.quickconnect.to', 'last_resolved': '2022-08-16 09:18:45'}], 'response_code': 1, 'undetected_urls': [], 'verbose_msg': 'IP address in dataset'}": ""
+  },
+  {
+    "{'as_owner': 'MyRepublic Ltd.', 'asn': 56300, 'country': 'SG', 'detected_urls': [], 'resolutions': [{'hostname': 'briannadia.direct.quickconnect.to', 'last_resolved': '2022-05-02 15:28:03'}, {'hostname': 'device-21ddb05c-b98b-40f3-b0a6-adf7dad86097.remotewd.com', 'last_resolved': '2020-03-26 11:02:52'}, {'hostname': 'device-9aacc3e4-8504-4ac7-932d-25f94ea08e2e.remotewd.com', 'last_resolved': '2020-05-10 02:03:08'}, {'hostname': 'klumpsier.synology.me', 'last_resolved': '2021-04-25 01:04:30'}], 'response_code': 1, 'verbose_msg': 'IP address in dataset'}": ""
+  },
+  {
+    "{'as_owner': 'SINGTEL MOBILE INTERNET SERVICE PROVIDER Singapore', 'asn': 45143, 'country': 'SG', 'detected_urls': [], 'resolutions': [], 'response_code': 1, 'undetected_urls': [['http://111.65.32.159/', '601f1271a548e3e6da0e2e146001f0204f77d3f3ae06176bdabd8512e866e080', 0, 91, '2024-02-25 12:50:19']], 'verbose_msg': 'IP address in dataset'}": ""
+  },
+  {
+    "{'as_owner': 'SINGTEL MOBILE INTERNET SERVICE PROVIDER Singapore', 'asn': 45143, 'country': 'SG', 'detected_urls': [], 'resolutions': [], 'response_code': 1, 'verbose_msg': 'IP address in dataset'}": ""
+  },
+  {
+    "{'as_owner': 'SINGTEL MOBILE INTERNET SERVICE PROVIDER Singapore', 'asn': 45143, 'country': 'SG', 'detected_urls': [], 'resolutions': [], 'response_code': 1, 'verbose_msg': 'IP address in dataset'}": ""
+  },
+  {
+    "{'as_owner': 'SINGTEL MOBILE INTERNET SERVICE PROVIDER Singapore', 'asn': 45143, 'country': 'SG', 'detected_urls': [], 'resolutions': [], 'response_code': 1, 'verbose_msg': 'IP address in dataset'}": ""
+  },
+  {
+    "{'as_owner': 'SINGTEL MOBILE INTERNET SERVICE PROVIDER Singapore', 'asn': 45143, 'country': 'SG', 'detected_referrer_samples': [], 'detected_urls': [], 'resolutions': [], 'response_code': 1, 'undetected_referrer_samples': [{'date': '2020-01-13 23:50:50', 'positives': 0, 'sha256': '264dcfb885c460f32290f287c23dc329d61241298bfa3dccebc96fe6a216b60a', 'total': 75}], 'verbose_msg': 'IP address in dataset'}": ""
+  },
+  {
+    "{'as_owner': 'SINGTEL MOBILE INTERNET SERVICE PROVIDER Singapore', 'asn': 45143, 'country': 'SG', 'detected_urls': [], 'resolutions': [{'hostname': 'device-4f80fe96-8288-40fe-8358-cf485ce4cd45.remotewd.com', 'last_resolved': '2021-03-18 01:38:07'}], 'response_code': 1, 'verbose_msg': 'IP address in dataset'}": ""
+  },
+  {
+    "{'as_owner': 'SINGTEL MOBILE INTERNET SERVICE PROVIDER Singapore', 'asn': '45143', 'country': 'SG', 'detected_urls': [], 'resolutions': [], 'response_code': 1, 'verbose_msg': 'IP address in dataset'}": ""
+  },
+  {
+    "{'as_owner': 'SINGTEL MOBILE INTERNET SERVICE PROVIDER Singapore', 'asn': 45143, 'country': 'SG', 'detected_urls': [], 'resolutions': [], 'response_code': 1, 'undetected_urls': [['http://111.65.71.137/', '71e66ae4aa56cf380bc69488241ed78f0cd792c8aa483128aadcdc38213af723', 0, 90, '2023-08-05 19:01:25']], 'verbose_msg': 'IP address in dataset'}": ""
+  },
+  {
+    "{'as_owner': 'MobileOne Ltd. MobileInternet Service Provider Singapore', 'asn': 4773, 'country': 'SG', 'detected_urls': [], 'resolutions': [], 'response_code': 1, 'verbose_msg': 'IP address in dataset'}": ""
+  },
+  {
+    "{'as_owner': 'Singtel Fibre Broadband', 'asn': 9506, 'country': 'SG', 'detected_urls': [], 'resolutions': [], 'response_code': 1, 'verbose_msg': 'IP address in dataset'}": ""
+  },
+  {
+    "{'as_owner': 'Singtel Fibre Broadband', 'asn': 9506, 'country': 'SG', 'detected_urls': [], 'resolutions': [{'hostname': 'bb116-14-161-118.singnet.com.sg', 'last_resolved': '2024-04-07 13:05:49'}], 'response_code': 1, 'verbose_msg': 'IP address in dataset'}": ""
+  },
+  {
+    "{'as_owner': 'Singtel Fibre Broadband', 'asn': 9506, 'country': 'SG', 'detected_urls': [], 'resolutions': [], 'response_code': 1, 'verbose_msg': 'IP address in dataset'}": ""
+  },
+  {
+    "{'as_owner': 'Singtel Fibre Broadband', 'asn': 9506, 'country': 'SG', 'detected_urls': [], 'resolutions': [], 'response_code': 1, 'verbose_msg': 'IP address in dataset'}": ""
+  },
+  {
+    "{'as_owner': 'Singtel Fibre Broadband', 'asn': 9506, 'country': 'SG', 'detected_urls': [], 'resolutions': [{'hostname': 'bb116-15-203-59.singnet.com.sg', 'last_resolved': '2020-11-12 16:21:59'}], 'response_code': 1, 'verbose_msg': 'IP address in dataset'}": ""
+  },
+  {
+    "{'as_owner': 'CHINA UNICOM China169 Backbone', 'asn': 4837, 'country': 'CN', 'detected_referrer_samples': [{'date': '2023-12-15 13:30:33', 'positives': 1, 'sha256': '0c232f1d3df212ce60535b4747b5db0f9c9ae58d8ed69d2ff6733091ce7bd0bc', 'total': 76}, {'date': '2021-07-17 08:44:04', 'positives': 2, 'sha256': 'eb18ef85b739bd0ccf2455158cbef0dd5224f37630060db01214804de6e87c37', 'total': 74}], 'detected_urls': [{'positives': 3, 'scan_date': '2024-05-05 11:38:01', 'total': 92, 'url': 'https://116.179.37.119/'}, {'positives': 3, 'scan_date': '2024-05-05 07:21:19', 'total': 92, 'url': 'http://116.179.37.119/'}], 'resolutions': [{'hostname': 'baiduspider-116-179-37-119.crawl.baidu.com', 'last_resolved': '2021-06-22 16:05:42'}], 'response_code': 1, 'undetected_referrer_samples': [{'date': '2024-07-01 08:22:14', 'positives': 0, 'sha256': '37a030ad908a7dcee5f18404759c09a25ec889ea8c77c0530a2d886d79e81720', 'total': 78}, {'date': '2021-05-12 07:17:48', 'positives': 0, 'sha256': '385424768b1b81cb8a4b770dcefae07aca249da9229c61ef28c17a900fa34330', 'total': 75}], 'undetected_urls': [], 'verbose_msg': 'IP address in dataset'}": ""
+  },
+  {
+    "{'as_owner': 'CHINA UNICOM China169 Backbone', 'asn': 4837, 'country': 'CN', 'detected_referrer_samples': [{'date': '2021-08-09 07:50:53', 'positives': 1, 'sha256': '2972d15c4ff0c4ad39860d8506a7c491f3ebe012f2b09a4a537e671ccf41d4be', 'total': 74}, {'date': '2021-07-17 08:44:04', 'positives': 2, 'sha256': 'eb18ef85b739bd0ccf2455158cbef0dd5224f37630060db01214804de6e87c37', 'total': 74}], 'detected_urls': [{'positives': 3, 'scan_date': '2024-04-27 09:21:54', 'total': 92, 'url': 'https://116.179.37.144/'}, {'positives': 3, 'scan_date': '2024-04-27 05:05:53', 'total': 92, 'url': 'http://116.179.37.144/'}], 'resolutions': [{'hostname': 'baiduspider-116-179-37-144.crawl.baidu.com', 'last_resolved': '2021-09-12 15:26:15'}], 'response_code': 1, 'undetected_referrer_samples': [{'date': '2023-12-28 05:13:34', 'positives': 0, 'sha256': '9d9d61dcd136e6ea4e5c246e0c8295dc8a2632fd20c4c9dfce8e4d9fdd901447', 'total': 76}, {'date': '2023-11-02 18:51:06', 'positives': 0, 'sha256': '9fb6a77f5d66404b1eeb3806f1a75fd38bd1258b20797e33d68f24b9ee9f656a', 'total': 76}, {'date': '2023-04-28 21:35:21', 'positives': 0, 'sha256': '62a3257926a59e6210c9eeeb8821f99007615c4a79d53943d6f80761eaa3df3a', 'total': 74}], 'undetected_urls': [], 'verbose_msg': 'IP address in dataset'}": ""
+  },
+  {
+    "{'as_owner': 'CHINA UNICOM China169 Backbone', 'asn': 4837, 'country': 'CN', 'detected_referrer_samples': [{'date': '2022-06-20 00:24:19', 'positives': 2, 'sha256': 'caa61c3204537fe11066117ffd9013bd1494e650369aa4d57403f14e1b067660', 'total': 71}, {'date': '2022-06-17 22:31:07', 'positives': 2, 'sha256': '690c65ea4febeb06c51a013de4646ca9673e35bac5137176fa3d50273eae740f', 'total': 71}, {'date': '2021-12-15 06:31:13', 'positives': 1, 'sha256': 'a617d7bb105984c0dc7beda66929400fc370c9bd15f3be57a62c9a0fc2563558', 'total': 72}], 'detected_urls': [{'positives': 3, 'scan_date': '2024-05-20 11:48:26', 'total': 94, 'url': 'https://116.179.37.167/'}, {'positives': 3, 'scan_date': '2024-05-20 03:06:44', 'total': 94, 'url': 'http://116.179.37.167/'}], 'resolutions': [{'hostname': 'baiduspider-116-179-37-167.crawl.baidu.com', 'last_resolved': '2021-04-30 18:53:17'}], 'response_code': 1, 'undetected_referrer_samples': [], 'undetected_urls': [], 'verbose_msg': 'IP address in dataset'}": ""
+  },
+  {
+    "{'as_owner': 'CHINA UNICOM China169 Backbone', 'asn': 4837, 'country': 'CN', 'detected_referrer_samples': [{'date': '2022-12-24 18:06:57', 'positives': 2, 'sha256': 'b55836cf4dbcdb82bf489c1e08e155f5b654bb6f4740db60a8ac81e3db43cf90', 'total': 76}], 'detected_urls': [{'positives': 2, 'scan_date': '2024-05-21 11:50:57', 'total': 94, 'url': 'https://116.179.37.182/'}], 'resolutions': [{'hostname': 'baiduspider-116-179-37-182.crawl.baidu.com', 'last_resolved': '2021-08-15 21:29:52'}], 'response_code': 1, 'undetected_referrer_samples': [{'date': '2023-12-28 05:13:34', 'positives': 0, 'sha256': '9d9d61dcd136e6ea4e5c246e0c8295dc8a2632fd20c4c9dfce8e4d9fdd901447', 'total': 76}, {'date': '2023-11-02 18:51:06', 'positives': 0, 'sha256': '9fb6a77f5d66404b1eeb3806f1a75fd38bd1258b20797e33d68f24b9ee9f656a', 'total': 76}, {'date': '2023-06-02 04:00:04', 'positives': 0, 'sha256': 'bbbae425040d5ce3157ae6b05bbb6af27afda304bdbbaef489213f468391ae0e', 'total': 75}], 'undetected_urls': [['http://116.179.37.182/', 'f0c054a18f29ec2cecf710f56c2a2cb6528ad8035182ee65dc95ff3b71bc9e90', 0, 92, '2024-05-07 14:51:31']], 'verbose_msg': 'IP address in dataset'}": ""
+  },
+  {
+    "{'as_owner': 'CHINA UNICOM China169 Backbone', 'asn': 4837, 'country': 'CN', 'detected_referrer_samples': [], 'detected_urls': [{'positives': 4, 'scan_date': '2024-04-19 22:37:34', 'total': 92, 'url': 'https://116.179.37.214/'}, {'positives': 4, 'scan_date': '2024-04-19 18:21:24', 'total': 92, 'url': 'http://116.179.37.214/'}], 'resolutions': [{'hostname': 'baiduspider-116-179-37-214.crawl.baidu.com', 'last_resolved': '2021-05-18 17:02:20'}], 'response_code': 1, 'undetected_referrer_samples': [{'date': '2022-05-17 12:34:39', 'positives': 0, 'sha256': '0229777617f96719855c7305b3c45bd2f3ed265a70e527024a0411566eebe5de', 'total': 72}], 'undetected_urls': [['https://baiduspider-116-179-37-214.crawl.baidu.com/', '166bfc94bf0dd8c5d3af327b388ea8ad02fe1d95ad82cef9a3e14a908428178e', 0, 93, '2021-11-14 03:47:20']], 'verbose_msg': 'IP address in dataset'}": ""
+  },
+  {
+    "{'as_owner': 'CHINA UNICOM China169 Backbone', 'asn': 4837, 'country': 'CN', 'detected_referrer_samples': [{'date': '2023-03-09 21:28:07', 'positives': 1, 'sha256': 'ac46d4ea835690536aadca0463907db8401aa36ee73093ccedadafff06f9d46c', 'total': 73}, {'date': '2021-07-17 08:44:04', 'positives': 2, 'sha256': 'eb18ef85b739bd0ccf2455158cbef0dd5224f37630060db01214804de6e87c37', 'total': 74}], 'detected_urls': [{'positives': 3, 'scan_date': '2024-03-24 04:49:07', 'total': 93, 'url': 'https://116.179.37.248/'}, {'positives': 3, 'scan_date': '2024-03-24 00:31:09', 'total': 93, 'url': 'http://116.179.37.248/'}], 'resolutions': [{'hostname': 'baiduspider-116-179-37-248.crawl.baidu.com', 'last_resolved': '2021-05-30 20:36:28'}], 'response_code': 1, 'undetected_referrer_samples': [{'date': '2023-09-23 06:20:38', 'positives': 0, 'sha256': '522bc0e409f490d8bfa01b6ba7db7d9826c8df5d48e099039607c73809b21bc5', 'total': 75}, {'date': '2022-08-03 02:28:33', 'positives': 0, 'sha256': 'dcf214b0d285422359009355a0ada07f29054b5e763d6ae9ed93cd184e3e638b', 'total': 74}, {'date': '2021-05-12 07:17:48', 'positives': 0, 'sha256': '385424768b1b81cb8a4b770dcefae07aca249da9229c61ef28c17a900fa34330', 'total': 75}], 'undetected_urls': [], 'verbose_msg': 'IP address in dataset'}": ""
+  },
+  {
+    "{'as_owner': 'CHINA UNICOM China169 Backbone', 'asn': 4837, 'country': 'CN', 'detected_referrer_samples': [{'date': '2022-06-09 14:34:48', 'positives': 2, 'sha256': 'e94df73fdb1828796887ff7a67e99cc7d9c04ef1c934705ee9a21703173c3c8d', 'total': 71}], 'detected_urls': [{'positives': 3, 'scan_date': '2024-05-13 11:49:15', 'total': 92, 'url': 'https://116.179.37.47/'}, {'positives': 3, 'scan_date': '2024-05-12 20:02:30', 'total': 92, 'url': 'http://116.179.37.47/'}], 'resolutions': [{'hostname': 'baiduspider-116-179-37-47.crawl.baidu.com', 'last_resolved': '2021-05-01 00:30:09'}], 'response_code': 1, 'undetected_referrer_samples': [{'date': '2023-12-28 05:13:34', 'positives': 0, 'sha256': '9d9d61dcd136e6ea4e5c246e0c8295dc8a2632fd20c4c9dfce8e4d9fdd901447', 'total': 76}, {'date': '2023-11-02 18:51:06', 'positives': 0, 'sha256': '9fb6a77f5d66404b1eeb3806f1a75fd38bd1258b20797e33d68f24b9ee9f656a', 'total': 76}, {'date': '2022-12-20 13:12:45', 'positives': 0, 'sha256': '231865857ced5af0d9b2fd9896869d5b93d782dfad66626ef153cbd17e5fd3ff', 'total': 76}, {'date': '2021-12-09 06:10:42', 'positives': 0, 'sha256': '37a030ad908a7dcee5f18404759c09a25ec889ea8c77c0530a2d886d79e81720', 'total': 69}], 'undetected_urls': [['https://baiduspider-116-179-37-47.crawl.baidu.com/', '4308f782ab4cc6c085f43f9f93ed607d33745a80ec32c437dfcb6308a50d5deb', 0, 93, '2021-11-14 03:11:39']], 'verbose_msg': 'IP address in dataset'}": ""
+  },
+  {
+    "{'as_owner': 'CHINA UNICOM China169 Backbone', 'asn': 4837, 'country': 'CN', 'detected_referrer_samples': [], 'detected_urls': [{'positives': 2, 'scan_date': '2024-05-13 11:49:15', 'total': 92, 'url': 'https://116.179.37.83/'}, {'positives': 1, 'scan_date': '2024-05-12 19:03:07', 'total': 92, 'url': 'http://116.179.37.83/'}], 'resolutions': [{'hostname': 'baiduspider-116-179-37-83.crawl.baidu.com', 'last_resolved': '2021-07-23 13:49:41'}], 'response_code': 1, 'undetected_referrer_samples': [{'date': '2023-09-23 06:20:38', 'positives': 0, 'sha256': '522bc0e409f490d8bfa01b6ba7db7d9826c8df5d48e099039607c73809b21bc5', 'total': 75}, {'date': '2022-08-03 02:28:33', 'positives': 0, 'sha256': 'dcf214b0d285422359009355a0ada07f29054b5e763d6ae9ed93cd184e3e638b', 'total': 74}], 'undetected_urls': [['https://baiduspider-116-179-37-83.crawl.baidu.com/', 'f78da2db9e02f70ee003af559bd34b988893a5840ac3a9266ce7ca2e81101480', 0, 90, '2023-07-04 09:37:34']], 'verbose_msg': 'IP address in dataset'}": ""
+  },
+  {
+    "{'as_owner': 'CHINA UNICOM China169 Backbone', 'asn': 4837, 'country': 'CN', 'detected_referrer_samples': [], 'detected_urls': [{'positives': 3, 'scan_date': '2024-06-17 13:48:07', 'total': 95, 'url': 'http://116.179.37.92/'}, {'positives': 3, 'scan_date': '2024-05-07 19:12:30', 'total': 92, 'url': 'https://116.179.37.92/'}], 'resolutions': [{'hostname': 'baiduspider-116-179-37-92.crawl.baidu.com', 'last_resolved': '2021-05-30 20:37:56'}], 'response_code': 1, 'undetected_referrer_samples': [{'date': '2023-11-02 18:51:06', 'positives': 0, 'sha256': '9fb6a77f5d66404b1eeb3806f1a75fd38bd1258b20797e33d68f24b9ee9f656a', 'total': 76}, {'date': '2022-08-04 09:09:07', 'positives': 0, 'sha256': '5ec6439c5139cedbbef7ab9a8748cdcd76f5d0756fdc177ffe0dfd083bc88940', 'total': 74}, {'date': '2022-08-04 02:00:15', 'positives': 0, 'sha256': '8b350f1d3f7b43383ef22f9ad891fdb93b4931f664816b5bded615931f32727d', 'total': 74}, {'date': '2022-03-24 09:00:03', 'positives': 0, 'sha256': '79b085da6eb58cf6800ef484682614da96180405d0bd29376e3e4aaeda675c97', 'total': 71}], 'undetected_urls': [], 'verbose_msg': 'IP address in dataset'}": ""
+  },
+  {
+    "{'as_owner': 'CHINA UNICOM China169 Backbone', 'asn': 4837, 'country': 'CN', 'detected_referrer_samples': [{'date': '2022-12-24 18:06:57', 'positives': 2, 'sha256': 'b55836cf4dbcdb82bf489c1e08e155f5b654bb6f4740db60a8ac81e3db43cf90', 'total': 76}], 'detected_urls': [{'positives': 3, 'scan_date': '2024-04-10 05:27:33', 'total': 92, 'url': 'https://116.179.37.98/'}, {'positives': 4, 'scan_date': '2024-04-10 01:11:03', 'total': 92, 'url': 'http://116.179.37.98/'}], 'resolutions': [{'hostname': 'baiduspider-116-179-37-98.crawl.baidu.com', 'last_resolved': '2021-10-05 10:41:58'}], 'response_code': 1, 'undetected_referrer_samples': [{'date': '2023-12-28 05:13:34', 'positives': 0, 'sha256': '9d9d61dcd136e6ea4e5c246e0c8295dc8a2632fd20c4c9dfce8e4d9fdd901447', 'total': 76}], 'undetected_urls': [], 'verbose_msg': 'IP address in dataset'}": ""
+  },
+]
