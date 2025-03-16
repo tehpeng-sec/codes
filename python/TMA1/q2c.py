@@ -2,7 +2,7 @@ import random
 
 
 def get_valid_number(prompt, min_val, max_val):
-    """Ensures the user enters a valid number within a given range."""
+
     while True:
         try:
             value = int(input(prompt))
@@ -15,7 +15,7 @@ def get_valid_number(prompt, min_val, max_val):
 
 
 def get_expression(level, operator):
-    """Generates a mathematical expression and the correct answer."""
+
     lower_bound = 10 ** (level - 1)
     upper_bound = (10 ** level) - 1
 
@@ -41,7 +41,7 @@ def get_expression(level, operator):
 
 
 def math_practice():
-    """Main function that controls the math practice game."""
+
     correct_needed = get_valid_number("Enter number of correct answers before proceeding to the next level (2-5): ", 2,
                                       5)
     max_level = get_valid_number("Enter highest level to complete (1-5): ", 1, 5)
@@ -73,11 +73,11 @@ def math_practice():
                     print(
                         f"Correct! Well done! You have answered {correct_needed} questions correctly, proceeding to the next level {current_level + 1}.")
                     current_level += 1
-                    correct_count = 0  # Reset correct answer count for the new level
+                    correct_count = 0
         else:
             print(f"Wrong! The answer is {correct_answer}.")
             wrong_count += 1
-            correct_count = 0  # Reset correct streak
+            correct_count = 0
 
             if wrong_count < correct_needed:
                 print(
@@ -90,7 +90,7 @@ def math_practice():
                     print(
                         f"You have answered {correct_needed} questions wrongly, retake level {current_level - 1} again.")
                     current_level -= 1
-                    wrong_count = 0  # Reset wrong count after dropping a level
+                    wrong_count = 0
 
 
 # Run the program

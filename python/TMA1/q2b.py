@@ -2,18 +2,18 @@ import random
 
 def get_valid_level():
 
+    # The following loop requests for the correct user input.
     while True:
         try:
-            level = int(input("Enter highest level to complete (1-5): "))
-            if 1 <= level <= 5:
+            level = int(input("Enter highest level to complete (1-5): ")) # Request the user to input from 1-5
+            if 1 <= level <= 5: #Check if the number is between 1-5
                 return level
             else:
-                print("Highest level must be between 1 and 5.")
+                print("Highest level must be between 1 and 5.") # Request for the number again
         except ValueError:
-            print("Invalid input. Please enter a number between 1 and 5.")
+            print("Invalid input. Please enter a number between 1 and 5.") # If the user put in non-integer
 
 def get_expression(level, operator):
-    """Generates a mathematical expression and the correct answer."""
     lower_bound = 10**(level-1)
     upper_bound = (10**level) - 1
 
@@ -38,7 +38,7 @@ def get_expression(level, operator):
     return expression, answer
 
 def math_practice():
-    """Main function that controls the math practice game."""
+
     max_level = get_valid_level()  # Ask for valid level input
     current_level = 1
 
@@ -67,5 +67,5 @@ def math_practice():
                 break
             current_level = max(1, current_level - 1)
 
-# Run the program
+
 math_practice()
