@@ -1,0 +1,247 @@
+[
+    {
+        "vendor": "Microsoft",
+        "cve_id": "CVE-2025-21384",
+        "score": 8.3,
+        "severity": "HIGH",
+        "description": "An authenticated attacker can exploit an Server-Side Request Forgery (SSRF) vulnerability in Microsoft Azure Health Bot to elevate privileges over a network."
+    },
+    {
+        "vendor": "Microsoft",
+        "cve_id": "CVE-2025-25000",
+        "score": 8.8,
+        "severity": "HIGH",
+        "description": "Access of resource using incompatible type ('type confusion') in Microsoft Edge (Chromium-based) allows an unauthorized attacker to execute code over a network."
+    },
+    {
+        "vendor": "Microsoft",
+        "cve_id": "CVE-2025-29815",
+        "score": 7.6,
+        "severity": "HIGH",
+        "description": "Use after free in Microsoft Edge (Chromium-based) allows an authorized attacker to execute code over a network."
+    },
+    {
+        "vendor": "Microsoft",
+        "cve_id": "CVE-2025-26642",
+        "score": 7.8,
+        "severity": "HIGH",
+        "description": "Out-of-bounds read in Microsoft Office allows an unauthorized attacker to execute code locally."
+    },
+    {
+        "vendor": "Microsoft",
+        "cve_id": "CVE-2025-26688",
+        "score": 7.8,
+        "severity": "HIGH",
+        "description": "Stack-based buffer overflow in Microsoft Virtual Hard Drive allows an authorized attacker to elevate privileges locally."
+    },
+    {
+        "vendor": "Microsoft",
+        "cve_id": "CVE-2025-27744",
+        "score": 7.8,
+        "severity": "HIGH",
+        "description": "Improper access control in Microsoft Office allows an authorized attacker to elevate privileges locally."
+    },
+    {
+        "vendor": "Microsoft",
+        "cve_id": "CVE-2025-27745",
+        "score": 7.8,
+        "severity": "HIGH",
+        "description": "Use after free in Microsoft Office allows an unauthorized attacker to execute code locally."
+    },
+    {
+        "vendor": "Microsoft",
+        "cve_id": "CVE-2025-27746",
+        "score": 7.8,
+        "severity": "HIGH",
+        "description": "Use after free in Microsoft Office allows an unauthorized attacker to execute code locally."
+    },
+    {
+        "vendor": "Microsoft",
+        "cve_id": "CVE-2025-27747",
+        "score": 7.8,
+        "severity": "HIGH",
+        "description": "Use after free in Microsoft Office Word allows an unauthorized attacker to execute code locally."
+    },
+    {
+        "vendor": "Microsoft",
+        "cve_id": "CVE-2025-27748",
+        "score": 7.8,
+        "severity": "HIGH",
+        "description": "Use after free in Microsoft Office allows an unauthorized attacker to execute code locally."
+    },
+    {
+        "vendor": "Microsoft",
+        "cve_id": "CVE-2025-27749",
+        "score": 7.8,
+        "severity": "HIGH",
+        "description": "Use after free in Microsoft Office allows an unauthorized attacker to execute code locally."
+    },
+    {
+        "vendor": "Microsoft",
+        "cve_id": "CVE-2025-27750",
+        "score": 7.8,
+        "severity": "HIGH",
+        "description": "Use after free in Microsoft Office Excel allows an unauthorized attacker to execute code locally."
+    },
+    {
+        "vendor": "Microsoft",
+        "cve_id": "CVE-2025-27751",
+        "score": 7.8,
+        "severity": "HIGH",
+        "description": "Use after free in Microsoft Office Excel allows an unauthorized attacker to execute code locally."
+    },
+    {
+        "vendor": "Microsoft",
+        "cve_id": "CVE-2025-27752",
+        "score": 7.8,
+        "severity": "HIGH",
+        "description": "Heap-based buffer overflow in Microsoft Office Excel allows an unauthorized attacker to execute code locally."
+    },
+    {
+        "vendor": "Microsoft",
+        "cve_id": "CVE-2025-29791",
+        "score": 7.8,
+        "severity": "HIGH",
+        "description": "Access of resource using incompatible type ('type confusion') in Microsoft Office allows an unauthorized attacker to execute code locally."
+    },
+    {
+        "vendor": "Microsoft",
+        "cve_id": "CVE-2025-29792",
+        "score": 7.3,
+        "severity": "HIGH",
+        "description": "Use after free in Microsoft Office allows an authorized attacker to elevate privileges locally."
+    },
+    {
+        "vendor": "Microsoft",
+        "cve_id": "CVE-2025-29793",
+        "score": 7.2,
+        "severity": "HIGH",
+        "description": "Deserialization of untrusted data in Microsoft Office SharePoint allows an authorized attacker to execute code over a network."
+    },
+    {
+        "vendor": "Microsoft",
+        "cve_id": "CVE-2025-29794",
+        "score": 8.8,
+        "severity": "HIGH",
+        "description": "Improper authorization in Microsoft Office SharePoint allows an authorized attacker to execute code over a network."
+    },
+    {
+        "vendor": "Microsoft",
+        "cve_id": "CVE-2025-29800",
+        "score": 7.8,
+        "severity": "HIGH",
+        "description": "Improper privilege management in Microsoft AutoUpdate (MAU) allows an authorized attacker to elevate privileges locally."
+    },
+    {
+        "vendor": "Microsoft",
+        "cve_id": "CVE-2025-29801",
+        "score": 7.8,
+        "severity": "HIGH",
+        "description": "Incorrect default permissions in Microsoft AutoUpdate (MAU) allows an authorized attacker to elevate privileges locally."
+    },
+    {
+        "vendor": "Microsoft",
+        "cve_id": "CVE-2025-29816",
+        "score": 7.5,
+        "severity": "HIGH",
+        "description": "Improper input validation in Microsoft Office Word allows an unauthorized attacker to bypass a security feature over a network."
+    },
+    {
+        "vendor": "Microsoft",
+        "cve_id": "CVE-2025-29820",
+        "score": 7.8,
+        "severity": "HIGH",
+        "description": "Use after free in Microsoft Office Word allows an unauthorized attacker to execute code locally."
+    },
+    {
+        "vendor": "Microsoft",
+        "cve_id": "CVE-2025-29822",
+        "score": 7.8,
+        "severity": "HIGH",
+        "description": "Incomplete list of disallowed inputs in Microsoft Office OneNote allows an unauthorized attacker to bypass a security feature locally."
+    },
+    {
+        "vendor": "Microsoft",
+        "cve_id": "CVE-2025-29823",
+        "score": 7.8,
+        "severity": "HIGH",
+        "description": "Use after free in Microsoft Office Excel allows an unauthorized attacker to execute code locally."
+    },
+    {
+        "vendor": "Microsoft",
+        "cve_id": "CVE-2025-29834",
+        "score": 7.5,
+        "severity": "HIGH",
+        "description": "Out-of-bounds read in Microsoft Edge (Chromium-based) allows an unauthorized attacker to execute code over a network."
+    },
+    {
+        "vendor": "Fortinet",
+        "cve_id": "CVE-2023-40714",
+        "score": 9.9,
+        "severity": "CRITICAL",
+        "description": "A relative path traversal in Fortinet FortiSIEM versions 7.0.0, 6.7.0 through 6.7.2, 6.6.0 through 6.6.3, 6.5.1, 6.5.0 allows attacker to escalate privilege via uploading certain GUI elements"
+    },
+    {
+        "vendor": "Fortinet",
+        "cve_id": "CVE-2023-37930",
+        "score": 7.5,
+        "severity": "HIGH",
+        "description": "Multiple issues including the use of uninitialized ressources [CWE-908] and excessive iteration [CWE-834] vulnerabilities in Fortinet FortiOS SSL VPN webmode version 7.4.0, version 7.2.0 through 7.2.5, version 7.0.1 through 7.0.11 and version 6.4.7 through 6.4.14 and Fortinet FortiProxy SSL VPN webmode version 7.2.0 through 7.2.6 and version 7.0.0 through 7.0.12 allows a VPN user to corrupt memory potentially leading to code or commands execution via specifically crafted requests."
+    },
+    {
+        "vendor": "Fortinet",
+        "cve_id": "CVE-2024-26013",
+        "score": 7.5,
+        "severity": "HIGH",
+        "description": "A improper restriction of communication channel to intended endpoints vulnerability [CWE-923] in Fortinet FortiOS version 7.4.0 through 7.4.4, 7.2.0 through 7.2.8, 7.0.0 through 7.0.15, 6.4.0 through 6.4.15 and before 6.2.16, Fortinet FortiProxy version 7.4.0 through 7.4.2, 7.2.0 through 7.2.9 and before 7.0.15, Fortinet FortiManager version 7.4.0 through 7.4.2, 7.2.0 through 7.2.4, 7.0.0 through 7.0.11, 6.4.0 through 6.4.14 and before 6.2.13, Fortinet FortiAnalyzer version 7.4.0 through 7.4.2, 7.2.0 through 7.2.4, 7.0.0 through 7.0.11, 6.4.0 through 6.4.14 and before 6.2.13, Fortinet FortiVoice version 7.0.0 through 7.0.2 before 6.4.8 and Fortinet FortiWeb before 7.4.2 may allow an unauthenticated attacker in a man-in-the-middle position to impersonate the management device (FortiCloud server or/and in certain conditions, FortiManager), via intercepting the FGFM authentication request between the management device and the managed device"
+    },
+    {
+        "vendor": "Fortinet",
+        "cve_id": "CVE-2024-54024",
+        "score": 7.2,
+        "severity": "HIGH",
+        "description": "An improper neutralization of special elements used in an OS command ('OS Command Injection') vulnerability [CWE-78] in Fortinet FortiIsolator before version 2.4.6 allows a privileged attacker with super-admin profile and CLI access to execute unauthorized code via specifically crafted HTTP requests."
+    },
+    {
+        "vendor": "Fortinet",
+        "cve_id": "CVE-2024-48887",
+        "score": 9.8,
+        "severity": "CRITICAL",
+        "description": "A  unverified password change vulnerability in Fortinet FortiSwitch GUI may allow a remote unauthenticated attacker to change admin passwords via a specially crafted request"
+    },
+    {
+        "vendor": "Splunk",
+        "cve_id": "CVE-2025-20229",
+        "score": 8.0,
+        "severity": "HIGH",
+        "description": "In Splunk Enterprise versions below 9.3.3, 9.2.5,  and 9.1.8, and Splunk Cloud Platform versions below 9.3.2408.104, 9.2.2406.108, 9.2.2403.114, and 9.1.2312.208, a low-privileged user that does not hold the \"admin\" or \"power\" Splunk roles could perform a Remote Code Execution (RCE) through a file upload to the \"$SPLUNK_HOME/var/run/splunk/apptemp\" directory due to missing authorization checks."
+    },
+    {
+        "vendor": "Splunk",
+        "cve_id": "CVE-2025-20231",
+        "score": 7.1,
+        "severity": "HIGH",
+        "description": "In Splunk Enterprise versions below 9.4.1, 9.3.3, 9.2.5, and 9.1.8, and versions below 3.8.38 and 3.7.23 of the Splunk Secure Gateway app on Splunk Cloud Platform, a low-privileged user that does not hold the \u201cadmin\u201c or \u201cpower\u201c Splunk roles could run a search using the permissions of a higher-privileged user that could lead to disclosure of sensitive information.<br><br>The vulnerability requires the attacker to phish the victim by tricking them into initiating a request within their browser. The authenticated low-privileged user should not be able to exploit the vulnerability at will."
+    },
+    {
+        "vendor": "Cisco",
+        "cve_id": "CVE-2025-20139",
+        "score": 7.5,
+        "severity": "HIGH",
+        "description": "A vulnerability in chat messaging features of Cisco Enterprise Chat and Email (ECE) could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition.\r\n\r This vulnerability is due to improper validation of user-supplied input to chat entry points. An attacker could exploit this vulnerability by sending malicious requests to a messaging chat entry point in the affected application. A successful exploit could allow the attacker to cause the application to stop responding, resulting in a DoS condition. The application may not recover on its own and may need an administrator to manually restart services to recover."
+    },
+    {
+        "vendor": "Cisco",
+        "cve_id": "CVE-2025-20212",
+        "score": 7.7,
+        "severity": "HIGH",
+        "description": "A vulnerability in the Cisco AnyConnect VPN server of Cisco Meraki MX and Cisco Meraki Z Series devices could allow an authenticated, remote attacker to cause a denial of service (DoS) condition in the Cisco AnyConnect service on an affected device. To exploit this vulnerability, the attacker must have valid VPN user credentials on the affected device.\r\n\r This vulnerability exists because a variable is not initialized when an SSL VPN session is established. An attacker could exploit this vulnerability by supplying crafted attributes while establishing an SSL VPN session with an affected device. A successful exploit could allow the attacker to cause the Cisco AnyConnect VPN server to restart, resulting in the failure of the established SSL VPN sessions and forcing remote users to initiate a new VPN connection and reauthenticate. A sustained attack could prevent new SSL VPN connections from being established.\r\n\r Note: When the attack traffic stops, the Cisco AnyConnect VPN server recovers without manual intervention."
+    },
+    {
+        "vendor": "Cisco",
+        "cve_id": "CVE-2025-20236",
+        "score": 8.8,
+        "severity": "HIGH",
+        "description": "A vulnerability in the custom URL parser of Cisco Webex App could allow an unauthenticated, remote attacker to persuade a user to download arbitrary files, which could allow the attacker to execute arbitrary commands on the host of the targeted user.\r\n\r\nThis vulnerability is due to insufficient input validation when Cisco Webex App processes a meeting invite link. An attacker could exploit this vulnerability by persuading a user to click a crafted meeting invite link and download arbitrary files. A successful exploit could allow the attacker to execute arbitrary commands with the privileges of the targeted user."
+    }
+]
