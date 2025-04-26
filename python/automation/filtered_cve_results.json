@@ -210,20 +210,6 @@
         "description": "A  unverified password change vulnerability in Fortinet FortiSwitch GUI may allow a remote unauthenticated attacker to change admin passwords via a specially crafted request"
     },
     {
-        "vendor": "Splunk",
-        "cve_id": "CVE-2025-20229",
-        "score": 8.0,
-        "severity": "HIGH",
-        "description": "In Splunk Enterprise versions below 9.3.3, 9.2.5,  and 9.1.8, and Splunk Cloud Platform versions below 9.3.2408.104, 9.2.2406.108, 9.2.2403.114, and 9.1.2312.208, a low-privileged user that does not hold the \"admin\" or \"power\" Splunk roles could perform a Remote Code Execution (RCE) through a file upload to the \"$SPLUNK_HOME/var/run/splunk/apptemp\" directory due to missing authorization checks."
-    },
-    {
-        "vendor": "Splunk",
-        "cve_id": "CVE-2025-20231",
-        "score": 7.1,
-        "severity": "HIGH",
-        "description": "In Splunk Enterprise versions below 9.4.1, 9.3.3, 9.2.5, and 9.1.8, and versions below 3.8.38 and 3.7.23 of the Splunk Secure Gateway app on Splunk Cloud Platform, a low-privileged user that does not hold the \u201cadmin\u201c or \u201cpower\u201c Splunk roles could run a search using the permissions of a higher-privileged user that could lead to disclosure of sensitive information.<br><br>The vulnerability requires the attacker to phish the victim by tricking them into initiating a request within their browser. The authenticated low-privileged user should not be able to exploit the vulnerability at will."
-    },
-    {
         "vendor": "Cisco",
         "cve_id": "CVE-2025-20139",
         "score": 7.5,
