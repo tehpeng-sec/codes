@@ -1,2 +1,0 @@
-sudo dnf install gcc make perl kernel-devel kernel-headers bzip2 dkms
-sudo dnf update kernel-*
